@@ -1,50 +1,23 @@
-# React + TypeScript + Vite
+<a href="https://devchallenges.io/" target="_blank"><img src="./readme-content/logo.svg" alt="dev challenges logo" /></a>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<h1><a href="https://devchallenges.io/challenge/simple-coffee-listing">Simple Coffee Listing</a></h1>
 
-Currently, two official plugins are available:
+This challenge is great for working with Front-end libraries like React, Vue,... You will need to implement a reusable card component with different variables based on the data given.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Create a coffee listing page that matches the given design.
 
-## Expanding the ESLint configuration
+- Use React or other Front-end libraries for this challenge.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- Create a Reusable Card component.
 
-- Configure the top-level `parserOptions` property like this:
+- The card component should include a picture, name, pricing,  rating, and number of votes if exists.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- The card component should render popular tag, availability status conditionally.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+- Render Coffee list with given data. The data should come from a given API or downloaded JSON file.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+- Users can choose to list all products or just available products.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+- Deploy the solution and submit Repository URL and Demo URL.
+
+<img src="./readme-content/demo.webp" alt="challenge demo">
