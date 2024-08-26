@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
@@ -11,6 +13,9 @@ export default {
       fontSize: {
         "2xs": ["0.625rem", "1rem"],
         heading: ["2rem", "2.25rem"],
+      },
+      fontFamily: {
+        sans: ['"DMSans"', ...defaultTheme.fontFamily.sans],
       },
       colors: {
         shark: "#1B1D1F",
