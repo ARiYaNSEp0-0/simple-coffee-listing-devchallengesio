@@ -7,7 +7,7 @@ type Props = {
 
 const FilterableCoffeeList = ({ children }: Props) => {
   return (
-    <section className="relative flex flex-col items-center gap-5 rounded-xl bg-shark px-[32px] py-24 text-base font-semibold text-bridalhealth">
+    <section className="font-regular relative flex flex-col items-center rounded-xl bg-shark px-9 pb-20 pt-24 text-base text-bridalhealth tablet:pt-20">
       <Vector className="absolute right-0 top-2" aria-hidden={true} />
       {children}
     </section>

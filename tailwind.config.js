@@ -6,9 +6,9 @@ export default {
   theme: {
     extend: {
       screens: {
-        mobile: "640px",
-        tablet: "1024px",
-        desktop: "1280px",
+        "bigger-mobile": "541px",
+        tablet: "641px",
+        desktop: "1025px",
       },
       fontSize: {
         "2xs": ["0.625rem", "1rem"],
