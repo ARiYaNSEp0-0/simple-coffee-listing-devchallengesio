@@ -4,13 +4,13 @@ const Background = () => {
   return (
     <div
       aria-hidden={true}
-      className="w-full h-full fixed top-0 left-0 right-0 -z-50"
+      className="fixed left-0 right-0 top-0 -z-50 h-full w-full"
     >
       <div
-        className="bg-no-repeat bg-cover bg-[position:15%_50%]  w-full h-75"
+        className="h-75 w-full bg-cover bg-[position:15%_50%] bg-no-repeat"
         style={{ backgroundImage: `url(${BackgroundImage})` }}
       ></div>
-      <div className="bg-woodsmoke -z-50 h-full"></div>
+      <div className="-z-50 h-full bg-woodsmoke"></div>
     </div>
   );
 };

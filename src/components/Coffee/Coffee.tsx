@@ -30,13 +30,13 @@ const Coffee = ({
         height={160}
       />
       {popular && (
-        <span className="absolute left-2 top-2 font-bold  capitalize bg-creamcan text-woodsmoke rounded-full py-1 px-3 text-2xs">
+        <span className="absolute left-2 top-2 rounded-full bg-creamcan px-3 py-1 text-2xs font-bold capitalize text-woodsmoke">
           popular
         </span>
       )}
       <div className="flex items-center justify-between">
         <h2 className="text-lg">{name}</h2>
-        <span className="text-xs bg-surf p-1 rounded text-woodsmoke font-bold">
+        <span className="rounded bg-surf p-1 text-xs font-bold text-woodsmoke">
           {price}
         </span>
       </div>

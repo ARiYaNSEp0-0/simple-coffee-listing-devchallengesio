@@ -19,7 +19,7 @@ function App() {
 
   const handleFilterAvailable = () => {
     setFilteredCoffees((prevCoffees) =>
-      [...prevCoffees].filter((coffee) => coffee.available)
+      [...prevCoffees].filter((coffee) => coffee.available),
     );
     setActiveFilter("available");
   };
@@ -27,7 +27,7 @@ function App() {
   return (
     <>
       <Background />
-      <main className="min-h-screen flex justify-center items-start pt-40 pb-12 pl-[135px] pr-[120px]">
+      <main className="flex min-h-screen items-start justify-center pb-12 pl-[135px] pr-[120px] pt-40">
         <FilterableCoffeeList>
           <Introduction />
           <Filters

@@ -16,7 +16,7 @@ enum ButtuonVariantStyles {
 const Button = ({ children, variant = "default", onClick }: Props) => {
   return (
     <button
-      className={`py-[6px] px-3 text-bridalhealth text-[14px] rounded-lg ${ButtuonVariantStyles[variant]}`}
+      className={`rounded-lg px-3 py-[6px] text-[14px] text-bridalhealth ${ButtuonVariantStyles[variant]}`}
       onClick={onClick}
     >
       {children}
