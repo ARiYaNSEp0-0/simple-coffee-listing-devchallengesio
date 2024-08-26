@@ -24,6 +24,6 @@
     font-style: normal;
     font-weight: 700;
     font-display: swap;
-    src: url("./fonts/DMSans-Bold.ttf.ttf") format("truetype");
+    src: url("./fonts/DMSans-Bold.ttf") format("truetype");
   }
 }
