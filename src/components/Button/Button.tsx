@@ -2,14 +2,22 @@ import React from "react";
 
 type ButtonVariants = "active" | "default";
 
-type Props = { children?: React.ReactNode; variant?: ButtonVariants };
+type Props = {
+  children?: React.ReactNode;
+  variant?: ButtonVariants;
+  onClick?: () => void;
+};
 
-const Button = ({ children, variant = "default" }: Props) => {
+enum ButtuonVariantStyles {
+  "active" = "bg-palesky",
+  "default" = "bg-transparent",
+}
+
+const Button = ({ children, variant = "default", onClick }: Props) => {
   return (
     <button
-      className={`py-2 px-3 text-bridalhealth text-sm rounded-lg ${
-        variant === "active" ? "bg-palesky" : ""
-      }`}
+      className={`py-[6px] px-3 text-bridalhealth text-[14px] rounded-lg ${ButtuonVariantStyles[variant]}`}
+      onClick={onClick}
     >
       {children}
     </button>

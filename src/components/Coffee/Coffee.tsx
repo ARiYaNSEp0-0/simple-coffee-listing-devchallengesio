@@ -1,3 +1,5 @@
+import { StarEmpty, StarFill } from "../../images";
+
 export interface ICoffee {
   id?: number;
   name: string;
@@ -19,23 +21,43 @@ const Coffee = ({
   available,
 }: ICoffee) => {
   return (
-    <li className="relative flex flex-col gap-4">
-      <img className="rounded-2xl" src={image} alt={`coffee name is ${name}`} />
+    <li className="relative flex flex-col gap-3">
+      <img
+        className="rounded-2xl bg-palesky"
+        src={image}
+        alt={`coffee name is ${name}`}
+        width={260}
+        height={160}
+      />
       {popular && (
-        <span className="absolute left-2 top-2 font-bold  capitalize bg-creamcan text-woodsmoke rounded-full py-1 px-4 text-xs">
+        <span className="absolute left-2 top-2 font-bold  capitalize bg-creamcan text-woodsmoke rounded-full py-1 px-3 text-2xs">
           popular
         </span>
       )}
       <div className="flex items-center justify-between">
-        <h2>{name}</h2>
-        <span>{price}</span>
+        <h2 className="text-lg">{name}</h2>
+        <span className="text-xs bg-surf p-1 rounded text-woodsmoke font-bold">
+          {price}
+        </span>
       </div>
       <div className="flex items-center justify-between">
-        <span>
-          * {rating} ({votes} votes)
+        <span className="flex items-center gap-1">
+          {rating === null ? (
+            <StarEmpty aria-hidden={true} />
+          ) : (
+            <StarFill aria-hidden={true} />
+          )}
+          {rating === null ? (
+            <span className="text-palesky">No ratings</span>
+          ) : (
+            <>
+              <span>{rating}</span>
+              <span className="text-palesky">({votes} votes)</span>
+            </>
+          )}
         </span>
 
-        {!available && <span className="text-red-700">Sold out</span>}
+        {!available && <span className="text-terracotta">Sold out</span>}
       </div>
     </li>
   );

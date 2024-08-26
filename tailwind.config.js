@@ -12,6 +12,7 @@ export default {
       },
       fontSize: {
         "2xs": ["0.625rem", "1rem"],
+        base: ["1rem", "1.3rem"],
         heading: ["2rem", "2.25rem"],
       },
       fontFamily: {
@@ -25,6 +26,9 @@ export default {
         bridalhealth: "#FEF7EE",
         creamcan: "#F6C768",
         terracotta: "#ED735D",
+      },
+      height: {
+        75: "300px",
       },
     },
   },

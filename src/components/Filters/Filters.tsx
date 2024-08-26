@@ -1,13 +1,28 @@
 import Button from "../Button";
 
-function Filters() {
+type Props = {
+  activeFilter: string;
+  onFilterAll: () => void;
+  onFilterAvailable: () => void;
+};
+function Filters({ activeFilter, onFilterAll, onFilterAvailable }: Props) {
   return (
-    <menu className="flex items-center">
+    <menu className="flex items-center gap-2">
       <li>
-        <Button>All Products</Button>
+        <Button
+          onClick={onFilterAll}
+          variant={activeFilter === "all" ? "active" : "default"}
+        >
+          All Products
+        </Button>
       </li>
       <li>
-        <Button>Available Now</Button>
+        <Button
+          onClick={onFilterAvailable}
+          variant={activeFilter === "available" ? "active" : "default"}
+        >
+          Available Now
+        </Button>
       </li>
     </menu>
   );
