@@ -27,7 +27,7 @@ function App() {
   return (
     <>
       <Background />
-      <main className="bigger-mobile:pl-[135px] bigger-mobile:pr-[120px] flex min-h-screen items-start justify-center px-8 pb-12 pt-40 tablet:px-[156px] desktop:px-[93px]">
+      <main className="flex min-h-screen items-start justify-center px-8 pb-12 pt-40 bigger-mobile:pl-[135px] bigger-mobile:pr-[120px] tablet:px-[156px] desktop:px-[93px]">
         <FilterableCoffeeList>
           <Introduction />
           <div className="mt-5">
@@ -37,7 +37,7 @@ function App() {
               onFilterAvailable={handleFilterAvailable}
             />
           </div>
-          <div className="mt-10 max-w-5xl">
+          <div className="mt-9 max-w-5xl">
             <CoffeeMenu coffees={filteredCoffees} />
           </div>
         </FilterableCoffeeList>

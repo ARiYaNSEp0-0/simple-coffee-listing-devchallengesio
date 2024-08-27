@@ -1,4 +1,4 @@
-import { StarEmpty, StarFill } from "../../images";
+import Rating from "../Rating";
 
 export interface ICoffee {
   id?: number;
@@ -30,7 +30,7 @@ const Coffee = ({
         height={160}
       />
       {popular && (
-        <span className="absolute left-2 top-2 rounded-full bg-creamcan px-3 py-[2px] text-2xs font-bold capitalize text-woodsmoke">
+        <span className="absolute left-2 top-2 rounded-full bg-creamcan px-3 py-0.5 text-2xs font-bold capitalize text-woodsmoke">
           popular
         </span>
       )}
@@ -41,22 +41,7 @@ const Coffee = ({
         </span>
       </div>
       <div className="flex items-center justify-between">
-        <span className="flex items-center gap-1">
-          {rating === null ? (
-            <StarEmpty aria-hidden={true} />
-          ) : (
-            <StarFill aria-hidden={true} />
-          )}
-          {rating === null ? (
-            <span className="text-palesky">No ratings</span>
-          ) : (
-            <>
-              <span>{rating}</span>
-              <span className="text-palesky">({votes} votes)</span>
-            </>
-          )}
-        </span>
-
+        <Rating rating={rating} votes={votes} />
         {!available && <span className="text-terracotta">Sold out</span>}
       </div>
     </li>

@@ -6,9 +6,9 @@ export default {
   theme: {
     extend: {
       screens: {
-        "bigger-mobile": "541px",
-        tablet: "641px",
-        desktop: "1025px",
+        "bigger-mobile": "33.8125rem",
+        tablet: "40.0625rem",
+        desktop: "64.0625rem",
       },
       fontSize: {
         "2xs": ["0.625rem", "1rem"],
@@ -28,7 +28,16 @@ export default {
         terracotta: "#ED735D",
       },
       height: {
-        75: "300px",
+        75: "18.75rem",
+      },
+      backgroundPosition: {
+        "cafe-position": "15% 50%",
+      },
+      padding: {
+        0.5: "0.125rem",
+      },
+      maxWidth: {
+        "45ch": "45ch",
       },
     },
   },

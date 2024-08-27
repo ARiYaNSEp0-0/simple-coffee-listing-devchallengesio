@@ -7,7 +7,7 @@ type Props = {
 };
 function Filters({ activeFilter, onFilterAll, onFilterAvailable }: Props) {
   return (
-    <menu className="flex items-center justify-center gap-2">
+    <menu className="flex items-center justify-center gap-3">
       <li>
         <Button
           onClick={onFilterAll}
