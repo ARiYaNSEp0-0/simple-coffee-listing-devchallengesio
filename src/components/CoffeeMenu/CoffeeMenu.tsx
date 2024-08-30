@@ -1,4 +1,5 @@
-import Coffee, { ICoffee } from "../Coffee";
+import Coffee from "../Coffee";
+import { ICoffee } from "../../types";
 
 const CoffeeMneu = ({ coffees }: { coffees: ICoffee[] }) => {
   return (

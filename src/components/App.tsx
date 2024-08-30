@@ -5,23 +5,17 @@ import Filters from "./Filters";
 import Introduction from "./Introduction";
 import CoffeeMenu from "./CoffeeMenu";
 import { coffees } from "../data";
-import { ICoffee } from "./Coffee";
+import { filterReducer } from "../reducers/filterReducer";
+import { FilterActionType, FilterType } from "../types/filter";
 
 function App() {
-  const [activeFilter, setActiveFilter] = React.useState("all");
-  const [filteredCoffees, setFilteredCoffees] =
-    React.useState<ICoffee[]>(coffees);
+  const [filter, dispatch] = React.useReducer(filterReducer, {
+    filterType: FilterActionType.FILTER_ALL,
+    list: coffees,
+  });
 
-  const handleFilterAll = () => {
-    setFilteredCoffees(coffees);
-    setActiveFilter("all");
-  };
-
-  const handleFilterAvailable = () => {
-    setFilteredCoffees((prevCoffees) =>
-      [...prevCoffees].filter((coffee) => coffee.available),
-    );
-    setActiveFilter("available");
+  const handleFilter = (filterType: FilterType) => {
+    dispatch({ type: filterType, currentList: coffees });
   };
 
   return (
@@ -31,14 +25,10 @@ function App() {
         <FilterableCoffeeList>
           <Introduction />
           <div className="mt-5">
-            <Filters
-              activeFilter={activeFilter}
-              onFilterAll={handleFilterAll}
-              onFilterAvailable={handleFilterAvailable}
-            />
+            <Filters onFilter={handleFilter} activeFilter={filter.filterType} />
           </div>
           <div className="mt-9 max-w-5xl">
-            <CoffeeMenu coffees={filteredCoffees} />
+            <CoffeeMenu coffees={filter.list} />
           </div>
         </FilterableCoffeeList>
       </main>

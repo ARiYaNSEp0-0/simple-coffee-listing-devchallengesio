@@ -1,5 +1,5 @@
 import { StarEmpty, StarFill } from "../../images";
-import { ICoffee } from "../Coffee";
+import { ICoffee } from "../../types";
 
 type Props = Pick<ICoffee, "rating" | "votes">;
 

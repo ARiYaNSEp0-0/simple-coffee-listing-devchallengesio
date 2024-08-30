@@ -1,15 +1,5 @@
+import { ICoffee } from "../../types";
 import Rating from "../Rating";
-
-export interface ICoffee {
-  id?: number;
-  name: string;
-  image: string;
-  price: string;
-  rating: number | null;
-  votes: number;
-  popular: boolean;
-  available: boolean;
-}
 
 const Coffee = ({
   name,
